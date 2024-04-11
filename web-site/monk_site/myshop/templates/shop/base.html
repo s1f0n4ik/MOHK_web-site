@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOHK</title>
+    <link rel="stylesheet" href="{% static 'css/libs_products/bootstrap-grid.min.css' %}">
+<!--    <link rel="stylesheet" href="{% static 'products/libs_products/bootstrap.min.css' %}">-->
+    <link rel="stylesheet" href="{% static 'css/style_base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js"></script>
+
+</head>
+<style>
+
+</style>
+
+
+<body class="fon">
+    <div class="wrapper">
+        <div class="wrapper-content">
+            <header>
+                <nav class="navbar">
+                    <div class="container">
+                        <a href="/" class="navbar-brand">
+                            <img width="40px" src="{% static 'img/logos/Монк центр лого светл.png' %}">
+                            <p>МОНК</p>
+                            <img width="40px" src="{% static 'img/logos/Монк центр лого светл.png' %}">
+
+                        </a>
+                        <div class="navbar-wrap">
+                            <ul class="navbar-menu">
+                                <li>
+                                    <a href="#">
+                                           <img width="32px" src=" {% static 'img/logos/magazin_a42dv93bk6pp_32.png' %}" alt="">
+                                        О нас
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                           <img width="30px" src=" {% static 'img/logos/dostavka_szu66sbcblb2_32.png' %}" alt="">
+                                        Доставка
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                           <img width="30px" src=" {% static 'img/logos/skidka_69rcxh3h1b4f_32.png' %}" alt="">
+                                        Акции
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                           <img width="30px" src=" {% static 'img/logos/chelovek_dq0op6o54mbt_32.png' %}" alt="">
+                                        Профиль
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="basket-container">
+                                        <a href="#">
+                                            <img width="30px" src=" {% static 'img/logos/telezhka_13biymd7nuu6_32.png' %}" alt="">
+                                            Корзина
+                                        </a>
+                                        <div class="basket-items hidden">
+                                            <ul class="basket-list">
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div class="m-content">
+                {% block content %}
+                {% endblock content %}
+            </div>
+
+        </div>
+
+    </div>
+    <footer class="footer">
+        <p>Футер</p>
+    </footer>
+</body>
+
+</html>
