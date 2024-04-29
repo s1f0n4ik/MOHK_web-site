@@ -1,16 +1,16 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport"
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>{% block title %}МОНК{% endblock %}</title>
-        <link href="{% static 'css/base.css' %}" rel="stylesheet">
-    </head>
-    <body>
-        <div id="header">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <title>Медицинская Одежда Наилучшего Качества</title>
+</head>
+<body>
+    <div id="header">
             <a href="/Модная_Одежда_Наилучшего_Качества" class="logo">МОНК</a>
             <div class="navigation">
                 <div class="elem">
@@ -39,9 +39,5 @@
             {% endwith %}
             </div>
         </div>
-
-        <div id="content">
-        {% block content %}{% endblock %}
-        </div>
-    </body>
+</body>
 </html>

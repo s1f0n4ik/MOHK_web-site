@@ -24,10 +24,5 @@ def product_detail(request, id, slug):
     return render(request, 'shop/product/detail.html', {'product': product, 'cart_product_form': cart_product_form })
 
 
-# class GenreYear:
-#     """Жанры и года выхода фильмов"""
-#     def get_genres(self):
-#         return Category.objects.all()
-#
-#     def get_years(self):
-#         return G.objects.filter(draft=False).values("year")
+def main(request):
+    return render(request, 'shop/main.html')
