@@ -11,8 +11,23 @@
     </head>
     <body>
         <div id="header">
-            <a href="/Модная_Одежда_Наилучшего_Качества" class="logo">МОНК</a>
             <div class="navigation">
+                <div id="menu">
+                  <div id="menu-bar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                  </div>
+                  <nav class="nav" id="nav">
+                    <ul>
+                      <li><a href="/">Женское</a></li>
+                      <li><a href="#">Мужское</a></li>
+                      <li><a href="#">Аксессуары</a></li>
+                    </ul>
+                  </nav>
+                </div>
+
+                <div class="menu-bg" id="menu-bg"></div>
                 <div class="elem">
                     <a href="#" class="text_header">О нас</a>
                 </div>
@@ -26,15 +41,25 @@
                     <a href="#" class="text_header">Профиль</a>
                 </div>
             </div>
+            <a href="/Модная_Одежда_Наилучшего_Качества" class="logo">
+                <img width="40px" src="{% static 'img/logos/Монк центр лого светл.png' %}">
+                МОНК
+                <img width="40px" src="{% static 'img/logos/Монк центр лого светл.png' %}">
+            </a>
             <div id="subheader">
             {% with total_items=cart|length %}
             {% if cart|length > 0 %}
-            В корзине:
-            <a href="{% url 'cart:cart_detail' %}">
-                {{ total_items }} шт, {{ cart.get_total_price }}₽
-            </a>
+                   <a href="{% url 'cart:cart_detail' %}" class="cart_mini">
+                        <img width="30px" src=" {% static 'img/logos/telezhka_13biymd7nuu6_32.png' %}" alt="">
+                        {{ total_items }} шт, {{ cart.get_total_price }}₽
+                   </a>
+
             {% else %}
-                Корзина пустая
+                <div class="cart_mini">
+                   <a href="{% url 'cart:cart_detail' %}">
+                        <img width="30px" src=" {% static 'img/logos/telezhka_13biymd7nuu6_32.png' %}" alt="">
+                   </a>
+                </div>
             {% endif %}
             {% endwith %}
             </div>
@@ -44,4 +69,11 @@
         {% block content %}{% endblock %}
         </div>
     </body>
+<script>
+    function menuOnClick() {
+      document.getElementById("menu-bar").classList.toggle("change");
+      document.getElementById("nav").classList.toggle("change");
+      document.getElementById("menu-bg").classList.toggle("change-bg");
+    }
+</script>
 </html>

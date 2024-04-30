@@ -21,8 +21,8 @@ a:hover {
 }
 
 a.button, input[type="submit"] {
-    color:#fff;
-    background:#5993bb;
+    background-color:rgb(59, 65, 62);
+    color:rgb(211, 229, 225);
     border-radius:4px;
     padding:10px 20px;
     font-size:14px;
@@ -53,10 +53,11 @@ table th, table td {
     font-size:14px;
     padding:10px;
     margin:0;
+    color:rgb(59, 65, 62);
 }
 
 tbody tr:nth-child(odd) {
-    background:#efefef;
+    background:rgb(211, 229, 225);
 }
 
 tbody tr.subtotal {
@@ -64,10 +65,20 @@ tbody tr.subtotal {
 }
 
 thead th, tbody tr.total {
-    background:#5993bb;
-    color:#fff;
+    background: rgb(59, 65, 62);
+    color:rgb(211, 229, 225);
     font-weight:bold;
 }
+
+.delete_but {
+    color:rgb(59, 65, 62);
+}
+
+.update_but input{
+    background-color:rgb(59, 65, 62);
+    color:rgb(211, 229, 225);
+}
+
 
 table.cart {
     margin-bottom:40px;
