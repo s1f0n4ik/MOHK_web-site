@@ -90,6 +90,11 @@ table.cart img {
 
 tbody td.num {
     text-align:right;
+    color: rgb(211, 229, 225);
+}
+
+tbody td.num1 {
+    color: rgb(59, 65, 62);
 }
 
 td input[type="submit"] {
