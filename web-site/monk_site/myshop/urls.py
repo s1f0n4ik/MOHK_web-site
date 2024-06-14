@@ -10,5 +10,6 @@ urlpatterns = [
          ),
     path('<int:id>/<slug:slug>', views.product_detail,
          name='product_detail'),
-    path('Модная_Одежда_Наилучшего_Качества', views.main)
+    path('Модная_Одежда_Наилучшего_Качества', views.main),
+    path('0502_Орлов_ВКР', views.br)
 ]

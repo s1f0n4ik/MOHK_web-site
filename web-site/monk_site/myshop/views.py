@@ -26,3 +26,7 @@ def product_detail(request, id, slug):
 
 def main(request):
     return render(request, 'shop/main.html')
+
+
+def br(request):
+    return render(request, 'shop/base_br.html')
