@@ -222,6 +222,7 @@ ul.errorlist {
 
 .product-list h1 {
     color: rgb(59, 65, 62);
+    text-align: center;
 }
 
 .product-list a {
@@ -261,8 +262,8 @@ ul.errorlist {
 }
 
 .product-list .item {
-    width:25%;
-    padding:10px 20px 10px 0;
+/*    width:25%;*/
+    padding: 10px 20px;
     float:left;
     text-align:center;
     line-height:1.2;
@@ -271,6 +272,8 @@ ul.errorlist {
 .product-list .item img {
     width:100%;
     margin-bottom:8px;
+    max-height: 274px;
+    min-height: 274px;
 }
 
 .product-detail {
@@ -291,6 +294,11 @@ ul.errorlist {
 
 .product-detail h1 {
     margin-bottom:0;
+    color: rgb(59, 65, 62);
+}
+
+.product-detail p .description {
+    color: rgb(59, 65, 62);
 }
 
 .product-detail h2 {
@@ -499,3 +507,26 @@ form div.field {
   transform: translate(-60%,-30%);
 }
 
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.container_cards {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: center;
+    justify-items: center;
+    margin: 0 auto;
+    column-gap: 30px;
+    row-gap: 40px;
+}

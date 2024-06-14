@@ -5,18 +5,17 @@
 {% endblock %}
 {% block content %}
 <div class="product-detail">
-<img src="{% if product.image %}{{ product.image.url }}{% else %}
-{% static "img/no_image.png" %}{% endif %}">
-<h1>{{ product.name }}</h1>
-<h2>
-<a style="border-radius: 10px; background-color:rgb(59, 65, 62); color:rgb(211, 229, 225);" href="{{ product.category.get_absolute_url }}">{{product.category }}</a>
-</h2>
-<p class="price">{{ product.price }}₽ </p>
-    <form action="{% url 'cart:cart_add' product.id %}" method="post">
-        {{ cart_product_form }}
-        {% csrf_token %}
-        <input type="submit" value="В корзину">
-    </form>
-{{ product.description|linebreaks }}
+    <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}">
+    <h1>{{ product.name }}</h1>
+    <h2>
+    <a style="border-radius: 10px; background-color:rgb(59, 65, 62); color:rgb(211, 229, 225);" href="{{ product.category.get_absolute_url }}">{{product.category }}</a>
+    </h2>
+    <p class="price">{{ product.price }}₽ </p>
+        <form action="{% url 'cart:cart_add' product.id %}" method="post">
+            {{ cart_product_form }}
+            {% csrf_token %}
+            <input type="submit" value="В корзину">
+        </form>
+    <p class="description">{{ product.description|linebreaks }}</p>
 </div>
 {% endblock %}

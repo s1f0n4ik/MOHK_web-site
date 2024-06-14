@@ -8,6 +8,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>{% block title %}МОНК{% endblock %}</title>
         <link href="{% static 'css/base.css' %}" rel="stylesheet">
+        {% block links %} {% endblock %}
+
     </head>
     <body>
         <div id="header">
@@ -65,7 +67,7 @@
             </div>
         </div>
 
-        <div id="content">
+        <div id="content" class="content">
         {% block content %}{% endblock %}
         </div>
     </body>

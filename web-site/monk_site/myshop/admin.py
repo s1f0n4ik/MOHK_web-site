@@ -29,12 +29,18 @@ class ColorAdmin(admin.ModelAdmin):
     image_show.__name__ = "Картинка цвета"
 
 
+# class GalleryInline(admin.TabularInline):
+#     fk_name = 'product'
+#     model = Gallery
+
+
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['name', 'slug', 'image_show', 'price', 'available', 'created', 'uploaded']
     list_filter = ['available', 'created', 'uploaded']
     list_editable = ['price', 'available']
     prepopulated_fields = {'slug': ('name',)}
+    # inlines = [GalleryInline, ]
 
     def image_show(self, obj):
         if obj.image:
