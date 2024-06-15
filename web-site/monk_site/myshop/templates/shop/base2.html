@@ -8,6 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>{% block title %}МОНК{% endblock %}</title>
         <link href="{% static 'css/base.css' %}" rel="stylesheet">
+        <link href="{% static 'css/base_footer.css' %}" rel="stylesheet">
         {% block links %} {% endblock %}
 
     </head>
@@ -70,6 +71,17 @@
         <div id="content" class="content">
         {% block content %}{% endblock %}
         </div>
+        <footer>
+            <div class="fot">
+                <div class="col_fot">
+                    <div class="logo-wrapper"></div>
+                    <div class="copyright"></div>
+
+                </div>
+                <div class="col_fot"></div>
+                <div class="col_fot"></div>
+            </div>
+        </footer>
     </body>
 <script>
     function menuOnClick() {

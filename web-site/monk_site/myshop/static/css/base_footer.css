@@ -1,0 +1,18 @@
+footer {
+  width: 100%;
+  height: auto;
+  background: rgb(59, 65, 62);
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 25px;
+}
+
+footer .fot {
+  display: flex;
+  flex-direction: row;
+}
+
+footer .fot .col_fot{
+  display: flex;
+  flex-direction: column;
+}

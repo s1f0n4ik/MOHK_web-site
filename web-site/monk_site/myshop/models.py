@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from .utils import create_new_ref_number
 
 
 class Category(models.Model):
@@ -57,7 +58,13 @@ class Product(models.Model):
                                  on_delete=models.CASCADE)
 
     name = models.CharField(max_length=150, db_index=True)
-    slug = models.CharField(max_length=150, db_index=True, unique=True)
+    slug = models.CharField(
+           max_length = 10,
+           blank=True,
+           editable=False,
+           unique=True,
+           default=create_new_ref_number
+      )
     color = models.ForeignKey(Color,
                               related_name='products',
                               on_delete=models.CASCADE)
