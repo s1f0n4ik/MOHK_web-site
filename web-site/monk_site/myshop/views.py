@@ -31,5 +31,12 @@ def main(request):
     return render(request, 'shop/main.html')
 
 
-def br(request):
-    return render(request, 'shop/base_br.html')
+def politika(request):
+    return render(request, 'shop/politika.html')
+
+
+def sogl(request):
+    return render(request, 'shop/sogl.html')
+
+# def br(request):
+#     return render(request, 'shop/base_br.html')

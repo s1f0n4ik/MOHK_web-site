@@ -10,9 +10,46 @@ footer {
 footer .fot {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
 }
 
 footer .fot .col_fot{
   display: flex;
   flex-direction: column;
+  max-width: 25%;
+}
+
+footer .fot .col_fot a{
+  color: rgb(211, 229, 225);
+}
+
+.col_fot a:hover{
+  text-decoration: underline;
+}
+
+.footer_site-info p, .copyright{
+  color: rgb(211, 229, 225);
+}
+
+.col_fot ul li p, .col_fot ul li a{
+  color: rgb(211, 229, 225);
+}
+
+.col_fot ul{
+  text-align: center;
+}
+
+.col_fot ul li{
+  list-style-type: none;
+  margin: 20px 0; /*расстояние между пунктами по высоте*/
+  font-size: large;
+}
+
+.col_fot ul li a:hover{
+  text-decoration: underline;
+}
+
+h4 {
+  color: rgb(211, 229, 225);
+  font-size: large;
 }

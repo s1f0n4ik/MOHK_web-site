@@ -11,5 +11,6 @@ urlpatterns = [
     path('<int:id>/<slug:slug>', views.product_detail,
          name='product_detail'),
     path('Модная_Одежда_Наилучшего_Качества', views.main),
-    path('0502_Орлов_ВКР', views.br)
+    path('Политика_конфиденциальности', views.politika),
+    path('Согласие_на_обработку_данных', views.sogl)
 ]
