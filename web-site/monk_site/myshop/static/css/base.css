@@ -168,6 +168,10 @@ ul.errorlist {
     color:rgb(211, 229, 225);
 }
 
+.text_header:hover{
+    color:rgb(149, 174, 173);
+}
+
 #header .logo {
     font-family: 'Ubuntu', sans-serif;
     float:left;
