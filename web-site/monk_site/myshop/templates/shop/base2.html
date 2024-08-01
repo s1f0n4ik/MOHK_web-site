@@ -10,9 +10,15 @@
         <link href="{% static 'css/base.css' %}" rel="stylesheet">
         <link href="{% static 'css/base_footer.css' %}" rel="stylesheet">
         {% block links %} {% endblock %}
-
     </head>
+    
     <body>
+          <!-- Прелоадер -->
+        <div id="loader">
+            <img src="{% static 'img/Ресурс_1.png' %}" width="30%">
+            
+        </div>
+
         <div id="header">
             <div class="navigation">
                 <div id="menu">
@@ -142,4 +148,13 @@
       document.getElementById("menu-bg").classList.toggle("change-bg");
     }
 </script>
+<script type="text/javascript">
+    var loader = document.getElementById("loader");
+    window.addEventListener("load",function(){
+        loader.style.height="100px";
+        loader.style.width="100px";
+        loader.style.borderRadius="50%";
+        loader.style.visibility="hidden";
+    });
+  </script>
 </html>

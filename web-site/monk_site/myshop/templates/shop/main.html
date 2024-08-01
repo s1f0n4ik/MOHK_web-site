@@ -1,5 +1,158 @@
 {% extends "shop/base2.html" %}
 {% load static %}
+{%block links%}
+<link href="{% static 'css/main_content/main.css' %}" rel="stylesheet">
+<link href="{% static 'css/card_style.css' %}" rel="stylesheet">
+{% endblock %}
 {% block content %}
-<h1>Тут будет жоский контент!!!!</h1>
+
+<!-- <h1>Тут будет жоский контент!!!!</h1> -->
+
+
+    <!-- <div>
+        <img width="150px" src="{% static 'content/DSC_0294.JPG' %}">
+    </div> -->
+    
+    <div class="mainContentDiv">
+        <!-- slider -->
+
+        <div id="slider">
+            <ul id="slideWrap"> 
+              <li><img src="{% static 'content/DSC_0267.JPG'%}" alt=""></li>
+              <li><img src="{% static 'content/DSC_0272.JPG'%}" alt=""></li>
+              <li><img src="{% static 'content/DSC_0422.JPG'%}" alt=""></li>
+              <li><img src="{% static 'content/DSC_0062.JPG'%}" alt=""></li>
+              <li><img src="{% static 'content/DSC_0387.JPG'%}" alt=""></li>
+            </ul>
+            <a id="prev" href="#">&#8810;</a>
+            <a id="next" href="#">&#8811;</a>
+        </div>
+
+        <!-- collage -->
+        <div class="collage">
+            <div class="item elemCol1">
+                <img src="{% static 'content/52 1х1.png'%}">
+            </div>
+            <div class="item elemCol2">
+                <img src="{% static 'content/DSC_0294.JPG'%}">
+            </div>
+            <div class="item elemCol3">
+                <img src="{% static 'content/61 3х4 изменен цвет.png'%}">
+            </div>
+            <div class="item elemCol4">
+                <img src="{% static 'content/DSC_0062.JPG'%}">
+            </div>
+            <div class="item elemCol5">
+                <img src="{% static 'content/40 3х4.png'%}">
+            </div>
+        </div>
+
+        <!-- new arrivals -->
+        <h1 style="color: blueviolet; margin: 2%;">Новые поступления</h1>
+
+        <section class="cards">
+          <div class="container container_cards">
+              {% for product in products %}
+  <!--            <div class="item">-->
+  <!--                <a href="{{ product.get_absolute_url }}">-->
+  <!--                    <img src="{% if product.image %}{{ product.image.url }}{%else %}{% static 'img/no_image.png' %}{% endif %}">-->
+  <!--                </a>-->
+  <!--                <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>-->
+  <!--                <br>-->
+  <!--            {{ product.price }} ₽-->
+  <!--            </div>-->
+              <div class="container_list item">
+                  <div class="wrapper_list ">
+                     <div class="banner-image">
+                         <img src="{% if product.image %}{{ product.image.url }}{%else %}{% static 'img/no_image.png' %}{% endif %}">
+                     </div>
+                     <h1> {{ product.name }}<br>  </h1>
+                     <p> Цвет: {{ product.color }} <br/>
+                         Пол: {{ product.gender }} <br/>
+                       {{ product.price }} ₽</p>
+                  </div>
+                  <div class="button-wrapper">
+                      <button class="btn outline"><a href="{{ product.get_absolute_url }}">ДЕТАЛИ</a></button>
+                      <button class="btn fill cart_form_btn">
+  
+                          <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                              {{ cart_product_form }}
+                              {% csrf_token %}
+                              <input type="submit" value="В КОРЗИНУ">
+                          </form>
+                      </button>
+                  </div>
+              </div>
+              {% endfor %}
+              </div>
+      </section>
+        
+        
+    </div>
+    <script>
+        var responsiveSlider = function() {
+    
+    var slider = document.getElementById("slider");
+    var sliderWidth = slider.offsetWidth;
+    var slideList = document.getElementById("slideWrap");
+    var count = 1;
+    var items = slideList.querySelectorAll("li").length;
+    var prev = document.getElementById("prev");
+    var next = document.getElementById("next");
+    
+    window.addEventListener('resize', function() {
+      sliderWidth = slider.offsetWidth;
+    });
+    
+    var prevSlide = function() {
+      if(count > 1) {
+        count = count - 2;
+        slideList.style.left = "-" + count * sliderWidth + "px";
+        count++;
+      }
+      else if(count = 1) {
+        count = items - 1;
+        slideList.style.left = "-" + count * sliderWidth + "px";
+        count++;
+      }
+    };
+    
+    var nextSlide = function() {
+      if(count < items) {
+        slideList.style.left = "-" + count * sliderWidth + "px";
+        count++;
+      }
+      else if(count = items) {
+        slideList.style.left = "0px";
+        count = 1;
+      }
+    };
+    
+    next.addEventListener("click", function() {
+      nextSlide();
+    });
+    
+    prev.addEventListener("click", function() {
+      prevSlide();
+    });
+    
+    setInterval(function() {
+      nextSlide()
+    }, 5000);
+    
+    };
+    
+    window.onload = function() {
+    responsiveSlider();  
+    }
+    
+    
+      </script>
+
+<!-- <div>
+    <p class="line-1 anim-typewriter">
+        Медицинская Одежда Наилучшего Качества
+    </p>
+</div> -->
+
 {% endblock %}

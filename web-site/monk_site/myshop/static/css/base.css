@@ -534,3 +534,23 @@ form div.field {
     column-gap: 30px;
     row-gap: 40px;
 }
+
+#loader{
+    height: 1500px;
+    width: 1500px;
+    background-color: rgb(211, 229, 225);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    transition: all .5s;
+}
+
+#loader img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
