@@ -13,11 +13,6 @@ h1, h2, h3, h4, h5 , h6 {
 
 a {
     text-decoration:none;
-    color:#5993bb;
-}
-
-a:hover {
-    color:#77b6e2;
 }
 
 a.button, input[type="submit"] {
@@ -29,9 +24,18 @@ a.button, input[type="submit"] {
     border:0;
 }
 
+a.button:hover, input[type="submit"]:hover {
+    color: rgb(149, 174, 173);
+}
+
 a.button.light {
-    color:#666;
-    background:#ededed;
+    color:rgb(59, 65, 62);
+    background-color:rgb(149, 174, 173);
+    
+}
+
+a.button.light:hover{
+    color:rgb(211, 229, 225);
 }
 
 .text-left {
@@ -70,9 +74,10 @@ thead th, tbody tr.total {
     font-weight:bold;
 }
 
-.delete_but {
-    color:rgb(59, 65, 62);
-}
+/* .delete_but {
+    background-color:rgb(59, 65, 62);
+    color:rgb(211, 229, 225);
+} */
 
 .update_but input{
     background-color:rgb(59, 65, 62);
@@ -100,6 +105,10 @@ tbody td.num1 {
 td input[type="submit"] {
     font-size:12px;
     padding:4px 10px;
+}
+
+td input[type="submit"]:hover {
+    color:rgb(149, 174, 173);
 }
 
 form p label, form p input {
@@ -187,6 +196,10 @@ ul.errorlist {
 
 }
 
+#header .logo:hover {
+    color:rgb(149, 174, 173);
+}
+
 .cart_mini {
     display: flex;
     flex-direction: row;
@@ -205,6 +218,11 @@ ul.errorlist {
     color:rgb(211, 229, 225);
     margin: 20px 0 20px 20px;
 }
+
+#subheader a:hover{
+    color:rgb(149, 174, 173);
+}
+
 #subheader a img{
     margin-top:1px;
 }
@@ -242,6 +260,11 @@ ul.errorlist {
     margin:0;
     list-style:none;
     padding:10px 14px;
+    border-radius:4px;
+}
+
+#sidebar ul li:hover {
+    background-color: rgb(149, 174, 173);
 }
 
 #sidebar ul li a {
@@ -437,6 +460,10 @@ form div.field {
   transition: 0.3s ease;
 }
 
+.bar:hover {
+    background-color:rgb(149, 174, 173);
+}
+
 #bar1 {
   transform: translateY(-4px);
 }
@@ -552,5 +579,29 @@ form div.field {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+
+#id_quantity {
+    background-color: rgb(59, 65, 62);
+    border-radius:4px;
+    border-color: rgb(211, 229, 225);
+    color: rgb(211, 229, 225);
+}
+
+#id_quantity:hover {
+    color: rgb(149, 174, 173);
+}
+
+.delete_but {
+    background-color: rgb(59, 65, 62);
+    color: rgb(211, 229, 225);
+    border-radius:4px;
+    padding:4px 10px;
+    font-size:12px;
+    border:0;
+}
+
+.delete_but:hover {
+    color: rgb(149, 174, 173);
 }
 
