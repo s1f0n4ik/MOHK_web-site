@@ -12,5 +12,6 @@ urlpatterns = [
          name='product_detail'),
     path('Модная_Одежда_Наилучшего_Качества', views.main),
     path('Политика_конфиденциальности', views.politika),
-    path('Согласие_на_обработку_данных', views.sogl)
+    path('Согласие_на_обработку_данных', views.sogl),
+    path('О_нас', views.about)
 ]

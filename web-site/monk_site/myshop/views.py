@@ -52,5 +52,9 @@ def politika(request):
 def sogl(request):
     return render(request, 'shop/sogl.html')
 
+
+def about(request):
+    return render(request, 'shop/about.html')
+
 # def br(request):
 #     return render(request, 'shop/base_br.html')
