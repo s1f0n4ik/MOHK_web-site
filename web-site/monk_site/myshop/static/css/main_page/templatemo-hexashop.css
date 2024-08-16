@@ -23,16 +23,16 @@ Table of contents
 12. portfolio
 
 --------------------------------------------- */
-/* 
+/*
 ---------------------------------------------
 font & reset css
---------------------------------------------- 
+---------------------------------------------
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
-/* 
+/*
 ---------------------------------------------
 reset
---------------------------------------------- 
+---------------------------------------------
 */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
@@ -108,10 +108,10 @@ p {
   color: #2a2a2a;
 }
 
-/* 
+/*
 ---------------------------------------------
 global styles
---------------------------------------------- 
+---------------------------------------------
 */
 html,
 body {
@@ -201,10 +201,10 @@ body {
 
 
 
-/* 
+/*
 ---------------------------------------------
 header
---------------------------------------------- 
+---------------------------------------------
 */
 
 .background-header {
@@ -644,10 +644,10 @@ header
 }
 
 
-/* 
+/*
 ---------------------------------------------
 banner
---------------------------------------------- 
+---------------------------------------------
 */
 
 .main-banner {
@@ -857,7 +857,7 @@ Men
 #men .owl-dots {
   display: none;
 }
-    
+
 #men .owl-nav .owl-prev{
   position: absolute;
   left: -80px;
@@ -1018,7 +1018,7 @@ Women
 #women .owl-dots {
   display: none;
 }
-    
+
 #women .owl-nav .owl-prev{
   position: absolute;
   left: -80px;
@@ -1178,7 +1178,7 @@ Kids
 #kids .owl-dots {
   display: none;
 }
-    
+
 #kids .owl-nav .owl-prev{
   position: absolute;
   left: -80px;
@@ -1347,10 +1347,10 @@ Explore
   font-weight: 500;
 }
 
-/* 
+/*
 ---------------------------------------------
 Social
---------------------------------------------- 
+---------------------------------------------
 */
 
 #social {
@@ -1414,10 +1414,10 @@ Social
 }
 
 
-/* 
+/*
 ---------------------------------------------
 Subscribe
---------------------------------------------- 
+---------------------------------------------
 */
 
 .subscribe {
@@ -1493,10 +1493,10 @@ Subscribe
 }
 
 
-/* 
+/*
 ---------------------------------------------
 footer
---------------------------------------------- 
+---------------------------------------------
 */
 
 footer {
@@ -1567,10 +1567,10 @@ footer .under-footer a:hover {
 }
 
 
-/* 
+/*
 ---------------------------------------------
 Products Page
---------------------------------------------- 
+---------------------------------------------
 */
 
 .page-heading {
@@ -1719,10 +1719,10 @@ Products Page
 
 
 
-/* 
+/*
 ---------------------------------------------
 Single Product Page
---------------------------------------------- 
+---------------------------------------------
 */
 
 #product {
@@ -1853,7 +1853,7 @@ Single Product Page
 
 .quantity {
   display: inline-block; }
- 
+
  .quantity .input-text.qty {
   width: 35px;
   height: 39px;
@@ -1862,20 +1862,20 @@ Single Product Page
   background-color: transparent;
   border: 1px solid #efefef;
  }
- 
+
  .quantity.buttons_added {
   text-align: left;
   position: relative;
   white-space: nowrap;
   vertical-align: top; }
- 
+
  .quantity.buttons_added input {
   display: inline-block;
   margin: 0;
   vertical-align: top;
   box-shadow: none;
  }
- 
+
  .quantity.buttons_added .minus,
  .quantity.buttons_added .plus {
   padding: 7px 10px 8px;
@@ -1883,33 +1883,33 @@ Single Product Page
   background-color: #ffffff;
   border: 1px solid #efefef;
   cursor:pointer;}
- 
+
  .quantity.buttons_added .minus {
   border-right: 0; }
- 
+
  .quantity.buttons_added .plus {
   border-left: 0; }
- 
+
  .quantity.buttons_added .minus:hover,
  .quantity.buttons_added .plus:hover {
   background: #eeeeee; }
- 
+
  .quantity input::-webkit-outer-spin-button,
  .quantity input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   margin: 0; }
-  
+
   .quantity.buttons_added .minus:focus,
  .quantity.buttons_added .plus:focus {
   outline: none; }
 
 
 
-/* 
+/*
 ---------------------------------------------
 About Us Page
---------------------------------------------- 
+---------------------------------------------
 */
 
 .about-page-heading {
@@ -2133,10 +2133,10 @@ About Us Page
 
 
 
-/* 
+/*
 ---------------------------------------------
 contact Us Page
---------------------------------------------- 
+---------------------------------------------
 */
 
 .contact-us {
@@ -2215,10 +2215,10 @@ contact Us Page
 }
 
 
-/* 
+/*
 ---------------------------------------------
 responsive
---------------------------------------------- 
+---------------------------------------------
 */
 
 @media (max-width: 1200px) {
