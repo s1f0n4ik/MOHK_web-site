@@ -12,12 +12,12 @@
     <!-- <div>
         <img width="150px" src="{% static 'content/DSC_0294.JPG' %}">
     </div> -->
-    
+
     <div class="mainContentDiv">
         <!-- slider -->
 
         <div id="slider">
-            <ul id="slideWrap"> 
+            <ul id="slideWrap">
               <li><img src="{% static 'content/DSC_0267.JPG'%}" alt=""></li>
               <li><img src="{% static 'content/DSC_0272.JPG'%}" alt=""></li>
               <li><img src="{% static 'content/DSC_0422.JPG'%}" alt=""></li>
@@ -74,7 +74,7 @@
                   <div class="button-wrapper">
                       <button class="btn outline"><a href="{{ product.get_absolute_url }}">ДЕТАЛИ</a></button>
                       <button class="btn fill cart_form_btn">
-  
+
                           <form action="{% url 'cart:cart_add' product.id %}" method="post">
                               {{ cart_product_form }}
                               {% csrf_token %}
@@ -86,12 +86,12 @@
               {% endfor %}
               </div>
       </section>
-        
-        
+
+
     </div>
     <script>
         var responsiveSlider = function() {
-    
+
     var slider = document.getElementById("slider");
     var sliderWidth = slider.offsetWidth;
     var slideList = document.getElementById("slideWrap");
@@ -99,11 +99,11 @@
     var items = slideList.querySelectorAll("li").length;
     var prev = document.getElementById("prev");
     var next = document.getElementById("next");
-    
+
     window.addEventListener('resize', function() {
       sliderWidth = slider.offsetWidth;
     });
-    
+
     var prevSlide = function() {
       if(count > 1) {
         count = count - 2;
@@ -116,7 +116,7 @@
         count++;
       }
     };
-    
+
     var nextSlide = function() {
       if(count < items) {
         slideList.style.left = "-" + count * sliderWidth + "px";
@@ -127,26 +127,26 @@
         count = 1;
       }
     };
-    
+
     next.addEventListener("click", function() {
       nextSlide();
     });
-    
+
     prev.addEventListener("click", function() {
       prevSlide();
     });
-    
+
     setInterval(function() {
       nextSlide()
     }, 5000);
-    
+
     };
-    
+
     window.onload = function() {
-    responsiveSlider();  
+    responsiveSlider();
     }
-    
-    
+
+
       </script>
 
 <!-- <div>
