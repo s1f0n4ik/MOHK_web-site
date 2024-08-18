@@ -87,7 +87,7 @@
                         <li>
                             <div class="logo-wrapper">
                                 <a href="/">
-                                    <img width="150px" src=" {% static 'img/logos/logo_monk_new.png' %}" alt="МОНК">
+                                    <img width="150px" src="{% static 'img/logos/logo_monk_new_150.png' %}" alt="МОНК">
                                 </a>
                             </div>
                         </li>
@@ -141,21 +141,21 @@
                 </div>
             </div>
         </footer>
+        <script>
+            function menuOnClick() {
+              document.getElementById("menu-bar").classList.toggle("change");
+              document.getElementById("nav").classList.toggle("change");
+              document.getElementById("menu-bg").classList.toggle("change-bg");
+            }
+        </script>
+        <script type="text/javascript">
+            var loader = document.getElementById("loader");
+            window.addEventListener("load",function(){
+                loader.style.height="100px";
+                loader.style.width="100px";
+                loader.style.borderRadius="50%";
+                loader.style.visibility="hidden";
+            });
+          </script>
     </body>
-<script>
-    function menuOnClick() {
-      document.getElementById("menu-bar").classList.toggle("change");
-      document.getElementById("nav").classList.toggle("change");
-      document.getElementById("menu-bg").classList.toggle("change-bg");
-    }
-</script>
-<script type="text/javascript">
-    var loader = document.getElementById("loader");
-    window.addEventListener("load",function(){
-        loader.style.height="100px";
-        loader.style.width="100px";
-        loader.style.borderRadius="50%";
-        loader.style.visibility="hidden";
-    });
-  </script>
 </html>
