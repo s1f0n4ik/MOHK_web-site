@@ -80,12 +80,12 @@ class Product(models.Model):
     uploaded = models.DateTimeField(auto_now=True)
 
     class Meta:
+        indexes = [
+            models.Index(fields=["id", "slug"]),
+        ]
         ordering = ('name',)
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'
-        index_together = (
-            ('id', 'slug'),
-        )
 
     def __str__(self):
         return self.name
