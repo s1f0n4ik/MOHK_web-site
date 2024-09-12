@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.utils.safestring import mark_safe
 
 from .models import Category, Color, Product, Gender
+from .productmodelform import ProductModelForm
 
 
 @admin.register(Category)
@@ -36,14 +37,18 @@ class ColorAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['name', 'slug', 'image_show', 'price', 'available', 'created', 'uploaded']
+    list_display = ['name', 'slug', 'image_show',  'price', 'available', 'created', 'uploaded']
     list_filter = ['available', 'created', 'uploaded']
     list_editable = ['price', 'available']
+    form = ProductModelForm
+    # form = ProductModelForm
     # prepopulated_fields = {'slug': ('name',)}
     # inlines = [GalleryInline, ]
 
     def image_show(self, obj):
+
         if obj.image:
+
             return mark_safe("<img src='{}' width='60' />".format(obj.image.url))
         return "None"
 
