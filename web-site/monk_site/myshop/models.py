@@ -1,7 +1,8 @@
 from django.db import models
 from django.urls import reverse
 from .utils import create_new_ref_number
-
+import json
+import sys
 
 class Category(models.Model):
     name = models.CharField(max_length=100, db_index=True)
@@ -73,6 +74,7 @@ class Product(models.Model):
                                on_delete=models.CASCADE
                                )
     image = models.ImageField(upload_to=f'media/products/%Y/%m/%d', blank=True)
+    sub_images = models.TextField(blank=True,null=True)
     description = models.TextField(max_length=1000, blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     available = models.BooleanField(default=True)
@@ -94,6 +96,18 @@ class Product(models.Model):
         return reverse('myshop:product_detail', args=[self.id, self.slug])
 
 
+    def get_sub_images(self):
+        if self.sub_images:
+            try:
+                urls = json.loads(self.sub_images)
+
+                return [ {url} for url in urls]
+            except json.JSONDecodeError as e:
+                print("JSON Decode Error:", e)
+        return 1
+
+    def set_sub_images(self, images):
+        self.sub_images = json.dumps(images)
 # class Gallery(models.Model):
 #     image = models.ImageField(upload_to=f'media/products/%Y/%m/%d')
 #     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='images')

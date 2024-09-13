@@ -1,0 +1,5 @@
+
+{% for val in widget.value %}
+<img src='/media/{{ val }}' style="width:100px;padding: 0 5px" />
+{% endfor %}
+{% include "django/forms/widgets/clearable_file_input.html" %}
